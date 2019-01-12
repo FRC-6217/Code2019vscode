@@ -27,7 +27,7 @@ public class SwerveDriveClass {
 		 * value of y * -1
 		 */
 		double r = Math.sqrt((L * L) + (W * W));
-
+		y *= -1;
 
 		// The next thing we do is assign the value a to the equation. a makes the robot
 		// go backwards
