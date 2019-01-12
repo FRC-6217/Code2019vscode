@@ -11,7 +11,7 @@ public class WheelDrive {
 	private VictorSPX speedMotor;
 	private VictorSPX_PIDOutput motorPID;
 	private PIDController pidController;
-	private final double MAX_VOLTS = 5;
+	private final double MAX_VOLTS = 4.95;
 
 	public WheelDrive(int angleMotor, int speedMotor, int encoder) {
 		this.angleMotor = new VictorSPX(angleMotor);
@@ -28,8 +28,7 @@ public class WheelDrive {
 	}
 
 	public void drive(double speed, double angle, boolean isInverted) {
-		// if(isInverted = true) {speed *= -1;};
-		speedMotor.set(ControlMode.PercentOutput, -speed);
+		speedMotor.set(ControlMode.PercentOutput, speed);
 
 		double setpoint = (angle * (MAX_VOLTS * 0.5)) + (MAX_VOLTS * 0.5); // Optimization offset can be calculated
 																			// here.
