@@ -18,6 +18,6 @@ public class DriveTrain extends Subsystem {
 	}
 
 	public void Drive(double x, double y, double z) {
-		swerveDrive.drive(x, y, z);
+		swerveDrive.drive(y, -x, z);
 	}
 }

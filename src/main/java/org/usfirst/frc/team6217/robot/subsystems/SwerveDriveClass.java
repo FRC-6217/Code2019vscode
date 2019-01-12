@@ -67,9 +67,9 @@ public class SwerveDriveClass {
 		 * Lastly the results of the above code are all plugged back in to be used
 		 * later.
 		 */
-		backRight.drive(-backRightSpeed * .4, backRightAngle);
-		backLeft.drive(backLeftSpeed * .4 , backLeftAngle);
-		frontRight.drive(-frontRightSpeed * .4, frontRightAngle);
-		frontLeft.drive(frontLeftSpeed * .4, frontLeftAngle);
+		backRight.drive(-backRightSpeed * .7, backRightAngle);
+		backLeft.drive(backLeftSpeed * .7 , backLeftAngle);
+		frontRight.drive(-frontRightSpeed * .7, frontRightAngle);
+		frontLeft.drive(frontLeftSpeed * .7, frontLeftAngle);
 	}
 }
