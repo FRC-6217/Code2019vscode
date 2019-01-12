@@ -34,7 +34,6 @@ public class JoystickDrive extends Command {
 
         Robot.m_driveTrain.Drive (x, y, z);
     }
-
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         return false;
