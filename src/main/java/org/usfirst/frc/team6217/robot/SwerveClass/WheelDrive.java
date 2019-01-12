@@ -1,4 +1,4 @@
-package org.usfirst.frc.team6217.robot.subsystems;
+package org.usfirst.frc.team6217.robot.SwerveClass;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
