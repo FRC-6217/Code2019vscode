@@ -27,7 +27,7 @@ public class WheelDrive {
 
 	}
 
-	public void drive(double speed, double angle, boolean isInverted) {
+	public void drive(double speed, double angle) {
 		speedMotor.set(ControlMode.PercentOutput, speed);
 
 		double setpoint = (angle * (MAX_VOLTS * 0.5)) + (MAX_VOLTS * 0.5); // Optimization offset can be calculated
