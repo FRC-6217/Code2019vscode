@@ -11,7 +11,10 @@ public class JoystickDrive extends Command {
     private double x;
     private double y;
     private double z;
-    
+
+    private double x1;
+    private double y1;
+
     public JoystickDrive() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.m_driveTrain);
@@ -28,11 +31,15 @@ public class JoystickDrive extends Command {
         y = Robot.m_oi.joystick.getRawAxis(1);
         z = Robot.m_oi.joystick.getRawAxis(2);
         
-        x = (Math.abs(x) > .15 ? x : 0.0);
-        y = (Math.abs(y) > .15 ? y : 0.0);
+        x1 = x;//Robot.m_driveTrain.TransformX(x, y);
+        y1 = y;//Robot.m_driveTrain.TransformY(x, y);
+
+        x1 = (Math.abs(x1) > .15 ? x1 : 0.0);
+        y1 = (Math.abs(y1) > .15 ? y1 : 0.0);
         z = (Math.abs(z) > .15 ? z : 0.0);
 
-        Robot.m_driveTrain.Drive (x, y, z);
+
+        Robot.m_driveTrain.Drive (x1, y1, z);
     }
 
     // Make this return true when this Command no longer needs to run execute()

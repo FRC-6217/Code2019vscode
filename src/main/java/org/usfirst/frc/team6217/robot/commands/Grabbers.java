@@ -16,6 +16,7 @@ public class Grabbers extends Command{
 
     // Called just before this Command runs the first time
     protected void initialize() {
+        Robot.m_pneumatics.setUpCompressor();
     }
 
     // Called repeatedly when this Command is scheduled to run

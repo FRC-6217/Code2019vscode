@@ -23,8 +23,8 @@ import org.usfirst.frc.team6217.robot.subsystems.Pneumatics;
  * project.
  */
 public class Robot extends TimedRobot {
-	public static DriveTrain m_driveTrain = new DriveTrain();
-	public static Pneumatics m_pneumatics = new Pneumatics();
+	public static DriveTrain m_driveTrain;
+	public static Pneumatics m_pneumatics;
 	public static OI m_oi;
 
 	Command m_autonomousCommand;
@@ -36,6 +36,8 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void robotInit() {
+		m_driveTrain = new DriveTrain();
+		m_pneumatics = new Pneumatics();
 		m_oi = new OI();
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", m_chooser);
